@@ -6,7 +6,7 @@ import java.io.File;
 import java.util.*;
 import java.io.FileNotFoundException;
 
-public class MaxTestLoadFunction {
+public class TestMaxLoadFunction {
 
     public int[] inputArray(String filepath) throws FileNotFoundException {
         Scanner sc = new Scanner(new File(filepath));

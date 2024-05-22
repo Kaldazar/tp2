@@ -1,13 +1,12 @@
 package test.java;
 
 import main.java.Main;
-import static org.junit.Assert.*;
 import org.junit.Test;
 import java.io.File;
 import java.util.*;
 import java.io.FileNotFoundException;
 
-public class MultTestLoadFunction {
+public class TestMultLoadFunction {
 
     public int[] inputArray(String filepath) throws FileNotFoundException {
         Scanner sc = new Scanner(new File(filepath));

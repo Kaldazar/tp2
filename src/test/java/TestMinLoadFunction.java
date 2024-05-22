@@ -1,13 +1,12 @@
 package test.java;
 
 import main.java.Main;
-import static org.junit.Assert.*;
 import org.junit.Test;
 import java.io.File;
 import java.util.*;
 import java.io.FileNotFoundException;
 
-public class SumTestLoadFunction {
+public class TestMinLoadFunction {
 
     public int[] inputArray(String filepath) throws FileNotFoundException {
         Scanner sc = new Scanner(new File(filepath));
@@ -21,86 +20,86 @@ public class SumTestLoadFunction {
     }
 
     @Test
-    public void loadSum10() throws FileNotFoundException {
+    public void loadMin10() throws FileNotFoundException {
         int[] arr = inputArray("tests/load10.txt");
         long startTime, endTime;
         startTime = System.nanoTime();
         for (int i = 0; i < 100_000; i++) {
-            Main._sum(arr);
+            Main._min(arr);
         }
         endTime = System.nanoTime();
-        System.out.println("Вычисление суммы из 10 эл-тов заняло: " + ((endTime - startTime) / 100_000) + " нс.");
+        System.out.println("Поиск минимума из 10 эл-тов занял: " + ((endTime - startTime) / 100_000) + " нс.");
     }
 
     @Test
-    public void loadSum100() throws FileNotFoundException {
+    public void loadMin100() throws FileNotFoundException {
         int[] arr = inputArray("tests/load100.txt");
         long startTime, endTime;
         startTime = System.nanoTime();
         for (int i = 0; i < 100_000; i++) {
-            Main._sum(arr);
+            Main._min(arr);
         }
         endTime = System.nanoTime();
-        System.out.println("Вычисление суммы из 100 эл-тов заняло: " + ((endTime - startTime) / 100_000) + " нс.");
+        System.out.println("Поиск минимума из 100 эл-тов занял: " + ((endTime - startTime) / 100_000) + " нс.");
     }
 
     @Test
-    public void loadSum1000() throws FileNotFoundException {
+    public void loadMin1000() throws FileNotFoundException {
         int[] arr = inputArray("tests/load1000.txt");
         long startTime, endTime;
         startTime = System.nanoTime();
         for (int i = 0; i < 100_000; i++) {
-            Main._sum(arr);
+            Main._min(arr);
         }
         endTime = System.nanoTime();
-        System.out.println("Вычисление суммы из 1000 эл-тов заняло: " + ((endTime - startTime) / 100_000) + " нс.");
+        System.out.println("Поиск минимума из 1000 эл-тов занял: " + ((endTime - startTime) / 100_000) + " нс.");
     }
 
     @Test
-    public void loadSum10000() throws FileNotFoundException {
+    public void loadMin10000() throws FileNotFoundException {
         int[] arr = inputArray("tests/load10000.txt");
         long startTime, endTime;
         startTime = System.nanoTime();
         for (int i = 0; i < 100_000; i++) {
-            Main._sum(arr);
+            Main._min(arr);
         }
         endTime = System.nanoTime();
-        System.out.println("Вычисление суммы из 10000 эл-тов заняло: " + ((endTime - startTime) / 100_000) + " нс.");
+        System.out.println("Поиск минимума из 10000 эл-тов занял: " + ((endTime - startTime) / 100_000) + " нс.");
     }
 
     @Test
-    public void loadSum100_000() throws FileNotFoundException {
+    public void loadMin100_000() throws FileNotFoundException {
         int[] arr = inputArray("tests/load100_000.txt");
         long startTime, endTime;
         startTime = System.nanoTime();
         for (int i = 0; i < 100_000; i++) {
-            Main._sum(arr);
+            Main._min(arr);
         }
         endTime = System.nanoTime();
-        System.out.println("Вычисление суммы из 100_000 эл-тов заняло: " + ((endTime - startTime) / 100_000) + " нс.");
+        System.out.println("Поиск минимума из 100_000 эл-тов занял: " + ((endTime - startTime) / 100_000) + " нс.");
     }
 
     @Test
-    public void loadSum500_000() throws FileNotFoundException {
+    public void loadMin500_000() throws FileNotFoundException {
         int[] arr = inputArray("tests/load500_000.txt");
         long startTime, endTime;
         startTime = System.nanoTime();
         for (int i = 0; i < 100_000; i++) {
-            Main._sum(arr);
+            Main._min(arr);
         }
         endTime = System.nanoTime();
-        System.out.println("Вычисление суммы из 500_000 эл-тов заняло: " + ((endTime - startTime) / 100_000) + " нс.");
+        System.out.println("Поиск минимума из 500_000 эл-тов занял: " + ((endTime - startTime) / 100_000) + " нс.");
     }
 
     @Test
-    public void loadSum1_000_000() throws FileNotFoundException {
+    public void loadMin1_000_000() throws FileNotFoundException {
         int[] arr = inputArray("tests/load1_000_000.txt");
         long startTime, endTime;
         startTime = System.nanoTime();
         for (int i = 0; i < 100_000; i++) {
-            Main._sum(arr);
+            Main._min(arr);
         }
         endTime = System.nanoTime();
-        System.out.println("Вычисление суммы из 1_000_000 эл-тов заняло: " + ((endTime - startTime) / 100_000) + " нс.");
+        System.out.println("Поиск минимума из 1_000_000 эл-тов занял: " + ((endTime - startTime) / 100_000) + " нс.");
     }
 }
