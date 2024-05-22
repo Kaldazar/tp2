@@ -1,10 +1,5 @@
 package main.java;
 
-import test.java.*;
-import org.junit.Test;
-import java.util.*;
-import java.io.File;
-
 public class Main {
 
     public static int _min(int[] arr) {
