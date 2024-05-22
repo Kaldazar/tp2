@@ -1,3 +1,6 @@
+package main.java;
+
+import test.java.*;
 import org.junit.Test;
 import java.util.*;
 import java.io.File;
@@ -52,7 +55,5 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-        org.junit.runner.JUnitCore.main("TestFunction");
-    }
+    public static void main(String[] args) {}
 }

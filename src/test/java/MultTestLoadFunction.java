@@ -1,3 +1,6 @@
+package test.java;
+
+import main.java.Main;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import java.io.File;
