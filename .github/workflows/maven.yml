@@ -47,6 +47,6 @@ jobs:
     # Job status
         status: ${{ job.status }}
     # Custom message
-        message: ${{ job.status == 'success' && 'ALL TESTS PASSED' || 'Tests failed' }}
+        message: ${{ job.status == 'success' && 'ALL TESTS PASSED' || 'TESTS FAILED' }}
           
 
