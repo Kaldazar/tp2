@@ -30,6 +30,7 @@ jobs:
         cache: maven
 
     - name: Run tests
+      id: run_tests
       run: mvn -B test
       continue-on-error: true
 
@@ -43,8 +44,8 @@ jobs:
     # The target to which the message will be sent, can be a Telegram Channel or Group
         chatId: ${{ secrets.TELEGRAM_ID }}
     # The current status of the job: job.status, defaults to 'success'
-        jobStatus: ${{ job.status }} # optional, default is success
+        jobStatus: success #${{ job.status }} # optional, default is success
     # Only non-success notifications will be sent if true, include success notifications otherwise, defaults to 'true'
-        skipSuccess: false # optional, default is true
+        #skipSuccess: false # optional, default is true
           
 
