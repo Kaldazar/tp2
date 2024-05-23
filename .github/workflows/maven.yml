@@ -34,34 +34,18 @@ jobs:
       run: mvn -B test
       continue-on-error: true
 
-    - name: Telegram Action on Failure
-      if: failure()
+    - name: Telegram sender
   # You may pin to the exact commit or the version.
-  # uses: xinthink/action-telegram@20b3085f4d1aa43c08c29411536b8b48658fc169
-      uses: xinthink/action-telegram@v1.1
+  # uses: robotomize/notify-telegram@f2821d117115d48ccbbde7609d2029603ee55b7e
+      uses: robotomize/notify-telegram@v0.2.4
       with:
-    # The Telegram Bot token
-        botToken: ${{ secrets.TELEGRAM_TOKEN }}
-    # The target to which the message will be sent, can be a Telegram Channel or Group
-        chatId: ${{ secrets.TELEGRAM_ID }}
-    # The current status of the job: job.status, defaults to 'success'
-        jobStatus: failure # optional, default is success
-    # Only non-success notifications will be sent if true, include success notifications otherwise, defaults to 'true'
-        skipSuccess: false # optional, default is true
-        
-    - name: Telegram Action on Success
-      if: success()
-  # You may pin to the exact commit or the version.
-  # uses: xinthink/action-telegram@20b3085f4d1aa43c08c29411536b8b48658fc169
-      uses: xinthink/action-telegram@v1.1
-      with:
-    # The Telegram Bot token
-        botToken: ${{ secrets.TELEGRAM_TOKEN }}
-    # The target to which the message will be sent, can be a Telegram Channel or Group
-        chatId: ${{ secrets.TELEGRAM_ID }}
-    # The current status of the job: job.status, defaults to 'success'
-        jobStatus: success # optional, default is success
-    # Only non-success notifications will be sent if true, include success notifications otherwise, defaults to 'true'
-        skipSuccess: false # optional, default is true
+    # Chat to send: chat id or @channel_name
+        chat: ${{ secrets.TELEGRAM_ID }}
+    # Telegram Bot token
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+    # Job status
+        status: ${{ job.status }}
+    # Custom message
+        message: ${{ job.status == 'success' && 'ALL TESTS PASSED' || 'Tests failed' }}
           
 
