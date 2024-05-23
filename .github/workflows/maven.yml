@@ -43,7 +43,7 @@ jobs:
     # The target to which the message will be sent, can be a Telegram Channel or Group
         chatId: ${{ secrets.TELEGRAM_ID }}
     # The current status of the job: job.status, defaults to 'success'
-        jobStatus: success # optional, default is success
+        jobStatus: ${{ job.status }} # optional, default is success
     # Only non-success notifications will be sent if true, include success notifications otherwise, defaults to 'true'
         skipSuccess: false # optional, default is true
           
