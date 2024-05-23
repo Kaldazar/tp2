@@ -32,9 +32,10 @@ jobs:
     - name: Run tests
       id: run_tests
       run: mvn -B test
-      continue-on-error: true
+      #continue-on-error: true
 
     - name: Telegram sender
+      if: always()
   # You may pin to the exact commit or the version.
   # uses: robotomize/notify-telegram@f2821d117115d48ccbbde7609d2029603ee55b7e
       uses: robotomize/notify-telegram@v0.2.4
