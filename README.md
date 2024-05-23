@@ -1,7 +1,7 @@
 # Техническое задание №2
 **Работа с тестами и развертка CI-системы**
 
-![Java CI with Maven](https://github.com/Kaldazar/tp2/actions/workflows/maven.yml/badge.svg)
+[![Java CI with Maven](https://github.com/Kaldazar/tp2/actions/workflows/maven.yml/badge.svg)](https://github.com/Kaldazar/tp2/actions/workflows/maven.yml)
 
 ## Работа на локальном устройстве
 
